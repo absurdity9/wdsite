@@ -1,0 +1,12 @@
+.breadcrum-area {
+    padding-top: 170px;
+    padding-bottom: 80px;
+    min-height: 420px;
+    height: 420px;
+    background: var(--gradient-7);
+    background: url('../images/background/bg.png') no-repeat center center/cover;
+  }
+  
+.inline-btn:hover {
+  color: #ff5722;
+}

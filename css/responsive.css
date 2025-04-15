@@ -1,9 +1,4 @@
-/* -------------------------------------------------------------------
- * Template         : Blueket - Digital Agency & Portfolio HTML Template
- * Author           : SeparateWeb
-------------------------------------------------------------------- */
 
-/**width under 1450px**/
 @media only screen and (max-width:1450px) {
 h1 {  font-size: 40px;  line-height: 50px; font-weight: 700;}
 h2 {  font-size: 35px;  line-height: 45px; font-weight: 400;}

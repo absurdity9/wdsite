@@ -1,0 +1,14 @@
+.fullworkcard {
+    height: 560px;
+  }
+  @media only screen and (max-width: 1450px) {
+    .blueket-card-noise{
+  height: 354px;
+    }
+  }
+  .blueket-card-noise{
+  height: 560px;
+    }
+  .inline-btn:hover {
+    color: #ff5722;
+  }
