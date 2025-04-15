@@ -92,18 +92,6 @@ This repository contains the source code for the personal portfolio website of W
 └── README.md                 # This file
 ```
 
-## Setup & Usage
-
-This is primarily a static website. To run it locally:
-
-1.  Clone the repository.
-2.  Open the `index.html` file directly in your web browser.
-3.  Alternatively, use a simple local web server (like Python's `http.server` or VS Code's Live Server extension) to serve the files from the root directory. This is recommended to avoid potential issues with file paths or AJAX requests if any exist.
-
-The website is deployed and accessible online via the domain specified in the `CNAME` file (likely `williamdeng.com`).
-
-**Note:** If a contact form relying on the PHP mailer in the `assets/email/` directory is intended to be used, a PHP-enabled server environment is required for that specific functionality. However, current contact methods seem to rely on `mailto:` links and the ConvertKit form.
-
 ## Potential Optimizations & Unused Assets
 
 This section lists areas identified during a brief codebase review that could be optimized or contain unused files. Further investigation is recommended to confirm usage before removal.
@@ -116,7 +104,7 @@ This section lists areas identified during a brief codebase review that could be
 3.  **Unused Images:** The `images/` directory, particularly subfolders like `demo/`, `figma/`, `object/`, `service/`, and `shape/`, likely contains many images from the original "Blueket" template that might not be used in the customized portfolio. A systematic check (searching the codebase for image filenames) is needed to identify and remove unused images to reduce repository size and potential loading weight. `images/ajax-loader.gif` might be unused if the PHP form is inactive.
 4.  **Unused JavaScript:** Review the various JS files in `js/` (`coundown.js`, `portfolio.loadmore.js`, `rellax.min.js`, `progressbar.min.js`, parts of `blueket.plugin.js`). Some functionalities might belong to the original template but aren't used in the final site.
 5.  **Unused CSS:** Check `blueket.plugin.css` and `style.css` for styles applied to elements or classes that no longer exist or features that were removed from the original template. Tools like browser developer tools (coverage tab) can help identify unused CSS on specific pages.
-6.  **Font Files:** Verify that all fonts included in `fonts/` (Slick?) and `webfonts/` (Font Awesome) are actively used. Remove unused font files and their corresponding CSS imports.
+
 7.  **HTML Pages:** Confirm the purpose and linkage of all HTML pages. Is `links.html` used? Is `projects.html` a standalone page or integrated into `index.html`?
 
 By addressing these points, the codebase can be made cleaner, potentially smaller, and easier to maintain.
