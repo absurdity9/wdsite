@@ -1,3 +1,26 @@
+/* ----- Add these styles to style.css ----- */
+
+/* Video Player Styling */
+.video-container {
+    margin-top: 12px; /* Optional: Space below the card title */
+    line-height: 0; /* Prevent potential extra space below video */
+    background-color: #000; /* Add black background in case video doesn't load aspect ratio perfectly */
+    border-radius: var(--md-border-radius); /* Match card corners */
+    overflow: hidden; /* Ensure video respects border-radius */
+}
+
+.video-container video {
+    display: block; /* Make it a block element */
+    width: 100%;   /* Make video fill container width */
+    max-width: 100%; /* Ensure it doesn't overflow container */
+    height: auto;    /* Maintain aspect ratio */
+    border-radius: var(--md-border-radius); /* Match card corners */
+}
+
+/* ----- End of added styles ----- */
+
+
+/* --- Previous CSS remains below --- */
 /* Basic Reset & Root Variables */
 :root {
     --md-primary-color: #6200ee; /* Example Purple */
@@ -14,7 +37,6 @@
     --md-border-radius: 4px;
     --md-elevation-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     --md-elevation-4: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.20);
-     /* Add more elevations as needed */
 }
 
 * {
@@ -59,11 +81,11 @@ body {
     border-radius: var(--md-border-radius);
     box-shadow: var(--md-elevation-1);
     margin-bottom: 16px;
-    overflow: hidden; /* Important for contained elements */
+    overflow: hidden;
     transition: box-shadow 0.3s ease-in-out;
 }
 .card:hover {
-     box-shadow: var(--md-elevation-4); /* Subtle hover effect */
+     box-shadow: var(--md-elevation-4);
 }
 
 .card__content {
@@ -77,10 +99,10 @@ body {
 .card__actions {
     padding: 8px;
     display: flex;
-    justify-content: flex-end; /* Align buttons to the right */
-    gap: 8px; /* Space between buttons */
-    border-top: 1px solid var(--md-divider-color); /* Add divider above actions */
-    margin-top: 16px; /* Space above divider */
+    justify-content: flex-end;
+    gap: 8px;
+    border-top: 1px solid var(--md-divider-color);
+    margin-top: 16px;
 }
 
 /* Typography Helpers */
@@ -103,33 +125,31 @@ body {
 
 /* Number of Items Input Area */
 .num-items-selector {
-    margin-bottom: 24px; /* Space below the number selector */
-    padding-bottom: 16px; /* Space before the divider */
-    border-bottom: 1px solid var(--md-divider-color); /* Divider */
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--md-divider-color);
 }
 .num-items-label {
     display: block;
-    font-size: 0.875rem; /* Body 2 */
+    font-size: 0.875rem;
     font-weight: 500;
     margin-bottom: 8px;
     color: var(--md-on-surface-medium-emphasis);
 }
 .num-items-selector input[type="number"] {
-    /* Inherits .textfield styles, add specifics if needed */
-    max-width: 100px; /* Don't need a full width input */
+    max-width: 100px;
 }
 .input-helper-text {
      margin-top: 4px;
      font-size: 0.75rem; /* Caption */
 }
 
-
-/* TextField Simulation (Very Basic) */
+/* TextField Simulation */
 .input-list {
     display: flex;
     flex-direction: column;
-    gap: 16px; /* Space between input fields */
-    margin-bottom: 16px; /* Space before card actions */
+    gap: 16px;
+    margin-bottom: 16px;
 }
 .textfield {
     padding: 12px 16px;
@@ -137,31 +157,28 @@ body {
     border-radius: var(--md-border-radius);
     font-size: 1rem;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.04); /* Slight background like filled */
+    background-color: rgba(0, 0, 0, 0.04);
     transition: border-color 0.2s ease, background-color 0.2s ease;
-    color: var(--md-on-surface-color); /* Ensure text color is appropriate */
+    color: var(--md-on-surface-color);
 }
 .textfield:focus {
     outline: none;
     border-color: var(--md-primary-color);
-    background-color: rgba(98, 0, 238, 0.06); /* Primary color tint on focus */
+    background-color: rgba(98, 0, 238, 0.06);
 }
-/* Hide spinner buttons for webkit browsers if desired */
 .textfield[type="number"]::-webkit-inner-spin-button,
 .textfield[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-/* Hide spinner buttons for Firefox if desired */
 .textfield[type="number"] {
   -moz-appearance: textfield;
 }
 
-
 /* Button */
 .button {
     font-family: inherit;
-    font-size: 0.875rem; /* Button */
+    font-size: 0.875rem;
     font-weight: 500;
     text-transform: uppercase;
     padding: 8px 16px;
@@ -170,8 +187,8 @@ body {
     cursor: pointer;
     outline: none;
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
-    position: relative; /* For potential ripple */
-    overflow: hidden; /* For potential ripple */
+    position: relative;
+    overflow: hidden;
     min-width: 64px;
     text-align: center;
 }
@@ -187,37 +204,35 @@ body {
 .button--outlined {
     background-color: transparent;
     color: var(--md-primary-color);
-    border: 1px solid rgba(98, 0, 238, 0.3); /* Slightly more visible outlined border */
+    border: 1px solid rgba(98, 0, 238, 0.3);
 }
 .button--outlined:hover {
-    background-color: rgba(98, 0, 238, 0.04); /* Primary color tint */
+    background-color: rgba(98, 0, 238, 0.04);
 }
-/* Add :active styles for press feedback */
-/* Real Material buttons have complex ripple effects */
 
 /* Comparison Specific */
 .comparison-buttons {
     display: flex;
-    gap: 16px; /* Space between choice buttons */
+    gap: 16px;
     margin-top: 16px;
-    flex-wrap: wrap; /* Allow wrapping on small screens */
+    flex-wrap: wrap;
 }
 .comparison-buttons .button {
-    flex-grow: 1; /* Make buttons take available space */
-    min-width: 120px; /* Ensure readable width */
+    flex-grow: 1;
+    min-width: 120px;
 }
 
 /* Linear Progress */
 .linear-progress {
     height: 4px;
-    background-color: rgba(98, 0, 238, 0.2); /* Lighter primary */
+    background-color: rgba(98, 0, 238, 0.2);
     border-radius: 2px;
     overflow: hidden;
     margin: 16px 0;
 }
 .linear-progress__bar {
     height: 100%;
-    width: 0; /* Controlled by JS */
+    width: 0;
     background-color: var(--md-primary-color);
     transition: width 0.3s ease-out;
 }
@@ -227,24 +242,23 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 0 12px 0; /* Adjust padding - slightly more bottom padding */
-    border-bottom: 1px solid var(--md-divider-color); /* Use the same divider */
-    margin-bottom: 4px; /* Optional small space before the first actual list item */
+    padding: 8px 0 12px 0;
+    border-bottom: 1px solid var(--md-divider-color);
+    margin-bottom: 4px;
 }
 
 .list-header__item,
 .list-header__count {
-    font-size: 0.875rem; /* Material Body 2 */
-    font-weight: 500;    /* Medium weight for headers */
-    color: var(--md-on-surface-medium-emphasis); /* Slightly less prominent than primary text */
-    text-transform: none; /* Override button styles if any cascade */
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--md-on-surface-medium-emphasis);
+    text-transform: none;
 }
 
 .list-header__count {
-    /* Ensure alignment with the score numbers */
-    min-width: 30px; /* Match the min-width of list-item__score */
-    text-align: center; /* Match the text-align of list-item__score */
-    padding: 0 8px; /* Match horizontal padding of list-item__score */
+    text-align: right;
+    padding: 0 8px;
+    margin-left: 8px;
 }
 
 
@@ -258,29 +272,28 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0; /* Vertical padding */
+    padding: 10px 0;
     border-bottom: 1px solid var(--md-divider-color);
 }
 .list-item:last-child {
     border-bottom: none;
 }
 .list-item__text {
-    font-size: 1rem; /* Body 1 */
-    padding-right: 8px; /* Add some space between text and score */
-    word-break: break-word; /* Prevent long item names from overflowing */
-}
-.list-item__score {
-    font-size: 0.875rem; /* Body 2 */
-    font-weight: 500;
-    color: var(--md-on-surface-medium-emphasis);
-    background-color: var(--md-background-color); /* Slight background for score */
-    padding: 4px 8px;
-    border-radius: 12px; /* Pill shape */
-    min-width: 30px;
-    text-align: center;
-    flex-shrink: 0; /* Prevent score from shrinking */
+    font-size: 1rem;
+    padding-right: 8px;
+    word-break: break-word;
 }
 
+.list-item__score {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--md-on-surface-medium-emphasis);
+    padding: 4px 8px;
+    text-align: right;
+    flex-shrink: 0;
+    white-space: nowrap;
+    margin-left: 8px;
+}
 
 /* Utility */
 .card--hidden {

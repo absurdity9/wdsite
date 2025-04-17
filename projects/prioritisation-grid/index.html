@@ -16,19 +16,27 @@
 
         <!-- Instructions Card -->
         <div class="card" id="instructions-card">
-            <div class="card__content">
-                <h2 class="card__title">Instructions</h2>
-                <p class="typography-body1">
-                    1. Choose how many items you want to prioritize (minimum 2).
-                    <br>
-                    2. Enter the names for each item below.
-                    <br>
-                    3. Click "Start Comparison".
-                    <br>
-                    4. For each pair presented, click the item that is more important.
-                    <br>
-                    5. Your prioritized list will be shown at the end.
-                </p>
+            <div class="card__content" style="display: grid; grid-template-columns: 1fr 300px; gap: 20px; align-items: start;">
+                <div>
+                    <h2 class="card__title">Instructions</h2>
+                    <p class="typography-body1">
+                        1. Choose how many items you want to prioritize (minimum 2).
+                        <br>
+                        2. Enter the names for each item below.
+                        <br>
+                        3. Click "Start Comparison".
+                        <br>
+                        4. For each pair presented, click the item that is more important.
+                        <br>
+                        5. Your prioritized list will be shown at the end.
+                    </p>
+                </div>
+                <div class="video-container">
+                    <video preload="metadata" controls style="width: 100%;">
+                        <source src="demo.mp4" type="video/mp4">
+                        Your browser does not support the video tag. Please ensure 'demo.mp4' is in the same folder as this HTML file.
+                    </video>
+                </div>
             </div>
         </div>
 
@@ -37,13 +45,12 @@
             <div class="card__content">
                 <h2 class="card__title">Enter Your Items</h2>
 
-                <!-- ****** START: Number of Items Input ****** -->
+                <!-- Number of Items Input -->
                 <div class="num-items-selector">
                      <label for="num-items-input" class="num-items-label">Number of Items:</label>
                      <input type="number" id="num-items-input" class="textfield" value="10" min="2" max="50" required>
                      <p class="typography-body2 input-helper-text">Enter a number between 2 and 50.</p>
                 </div>
-                <!-- ****** END: Number of Items Input ****** -->
 
 
                 <div id="item-inputs" class="input-list">
