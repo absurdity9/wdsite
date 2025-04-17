@@ -91,20 +91,3 @@ This repository contains the source code for the personal portfolio website of W
 │   └── vendor/               # Composer dependencies for PHPMailer
 └── README.md                 # This file
 ```
-
-## Potential Optimizations & Unused Assets
-
-This section lists areas identified during a brief codebase review that could be optimized or contain unused files. Further investigation is recommended to confirm usage before removal.
-
-1.  **`assets/` Directory:** This entire directory seems to contain older or potentially redundant files compared to the main `css/`, `js/`, and `images/` directories.
-    *   **`assets/css/` & `assets/js/`:** Contains duplicates of Bootstrap and potentially jQuery. Verify if these are needed or if the versions in the root `css/` and `js/` folders are sufficient.
-    *   **`assets/email/` & `assets/vendor/`:** Contains a PHPMailer setup. If the site only uses `mailto:` links and the ConvertKit form for contact/subscriptions, this entire PHP backend might be unused and can be removed.
-    *   **`assets/images/`:** Contains `favicon.png` (duplicate?) and `hero-img.svg` (check usage).
-2.  **Duplicate Libraries:** Ensure only one version of Bootstrap CSS/JS and jQuery is being loaded. Preferentially use the versions in the root `css/` and `js/` folders if they are the intended ones.
-3.  **Unused Images:** The `images/` directory, particularly subfolders like `demo/`, `figma/`, `object/`, `service/`, and `shape/`, likely contains many images from the original "Blueket" template that might not be used in the customized portfolio. A systematic check (searching the codebase for image filenames) is needed to identify and remove unused images to reduce repository size and potential loading weight. `images/ajax-loader.gif` might be unused if the PHP form is inactive.
-4.  **Unused JavaScript:** Review the various JS files in `js/` (`coundown.js`, `portfolio.loadmore.js`, `rellax.min.js`, `progressbar.min.js`, parts of `blueket.plugin.js`). Some functionalities might belong to the original template but aren't used in the final site.
-5.  **Unused CSS:** Check `blueket.plugin.css` and `style.css` for styles applied to elements or classes that no longer exist or features that were removed from the original template. Tools like browser developer tools (coverage tab) can help identify unused CSS on specific pages.
-
-7.  **HTML Pages:** Confirm the purpose and linkage of all HTML pages. Is `links.html` used? Is `projects.html` a standalone page or integrated into `index.html`?
-
-By addressing these points, the codebase can be made cleaner, potentially smaller, and easier to maintain.
