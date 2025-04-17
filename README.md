@@ -5,14 +5,14 @@ This repository contains the source code for the personal portfolio website of W
 ## Features
 
 *   **Project Showcase:** Displays key projects with descriptions and links (e.g., Collectable, Paysend, Elwood EMS/PMS).
-*   **Case Studies:** Detailed descriptions of selected projects (linked from the main project section).
+*   **Case Studies:** Descriptions of selected projects linked from the main project section.
 *   **Client Testimonials:** Rotating carousel featuring quotes from previous colleagues and clients.
 *   **Service Overview:** Sections describing areas of expertise (MVP solutions, Websites, Apps).
 *   **About Page:** Information about William Deng's background and experience.
 *   **Mentoring Page:** Details about mentoring services offered.
 *   **Figma Course Page:** Information related to Figma resources or courses.
 *   **Ideas Page:** A section potentially for blog posts or thought leadership content.
-*   **Contact Information:** `mailto:` links and social media profiles (LinkedIn, Dribbble).
+*   **Contact Information:** Social media profiles (LinkedIn, Dribbble).
 *   **Newsletter Signup:** Integration with ConvertKit for email subscriptions.
 *   **Responsive Design:** Adapts to various screen sizes using Bootstrap and custom responsive CSS.
 *   **Dark Mode:** Includes functionality for toggling between light and dark themes.
@@ -41,7 +41,6 @@ This repository contains the source code for the personal portfolio website of W
     *   Google Analytics (gtag.js)
 *   **Email/Forms:**
     *   ConvertKit: Embedded newsletter signup form.
-    *   PHPMailer (potentially unused, located in `assets/email/` and `assets/vendor/`): PHP library for sending emails (likely for a contact form that might not be active).
 
 ## File Structure
 
