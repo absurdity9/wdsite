@@ -27,7 +27,7 @@
       <link href="css/bootstrap.min.css" rel="stylesheet">
       <link href="css/blueket.plugin.css" rel="stylesheet">
       <!-- google font -->
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
       <!--Custom CSS File-->
@@ -113,8 +113,8 @@
                        for global audiences. </h1>
                      <div class="social-link-sw mt40 wow fadeInUp" data-wow-delay=".4s" style="color: #D15642;">
                         <span class="linktitle wow fadeInUp" data-wow-delay=".75s">
-                          <p>Currently designing trading systems at Elwood.io</p>
-                          <p><i class="fa-solid fa-arrow-down-long"></p></i>
+                          <p>Currently at Elwood.io - designing institutional trading platforms</p>
+                          <p><a href="#projects"><i class="fa-solid fa-arrow-down-long"></i></a></p>
                         </span>
                      </div>
                   </div>
@@ -123,7 +123,7 @@
       </section>
       <!--end sw-hero-section -->
 <!--start project block -->
-<section class="project-block-div section-space bkbg3 bg--2">
+<section id="projects" class="project-block-div section-space bkbg3 bg--2">
    <div class="container whitetxt">
      <div class="row justify-content-between">
        <div class="col-lg-6">
@@ -155,7 +155,7 @@
              <h2>Collectable</h2>
              <p class="mt15">Through user research, I identified that 'traders' were a major yet underserved customer segment. I led a redesign to focus on the trader persona, 
               adding key features tailored to their needs. This redesign drove a 35% increase in total trading volumes and 25% more trades per user. </p>
-             <a href="case-studies.html#collectable-work" class="inline-btn mt50">See More <i class="fa-solid fa-right-long"></i></a>
+             <a href="case-studies.html#collectable-work" class="inline-btn mt20">See More <i class="fa-solid fa-right-long"></i></a>
            </div>
            <div class="divviewwork">
              <img src="images/background/photo3.png" alt="img">
@@ -171,35 +171,35 @@
              <p class="mt15">I proposed and developed a new stablecoin concept backed by IMF Special Drawing Rights. I researched the model, built prototypes, and secured key partnerships. 
               I delivered a whitepaper, website, and other systems to launch the concept, validating the idea and gaining top-tier interest through comprehensive research, strategy, and execution."
              </p>
-             <a href="case-studies.html#paysend-work" class="inline-btn mt50">See More <i class="fa-solid fa-right-long"></i></a>
+             <a href="case-studies.html#paysend-work" class="inline-btn mt20">See More <i class="fa-solid fa-right-long"></i></a>
            </div>
            <div class="divviewwork">
              <img src="images/background/photo5.png" alt="img">
            </div>
          </div>
        </div>
-      <!-- project card 4 -->
+      <!-- project card 3 -->
       <div class="sw-card2 fwc">
         <div class="fullworkcard">
           <div class="divinfo">
             <span class="mb15">Trading Platform</span>
             <h2>Execution Management System</h2>
-            <p class="mt15">Elwood's EMS app provides scalable and customisable institutional-grade solutions for secure and efficient trading in digital asset markets. I led the UX design for new workflows (user journeys) for traders who want to trade against multiple liquidity providers. I designed new trading widgets including the trader shortcuts, a new order form and TCA widgets.</p>             
-            <a href="https://www.elwood.io/execution-management" class="inline-btn mt50">Live View <i class="fa-solid fa-right-long"></i></a>
+            <p class="mt15">Elwood's EMS provides a scalable and customisable institutional-grade solution for trading in digital asset markets. I led the UX design for new workflows for traders who want to trade against multiple liquidity providers and designed new trading widgets.</p>             
+            <a href="https://www.elwood.io/execution-management" class="inline-btn mt20">Live View <i class="fa-solid fa-right-long"></i></a>
           </div>
           <div class="divviewwork">
             <img src="images/background/ems.png" alt="Elwood Execution Management System">
           </div>
         </div>
       </div>
-      <!-- project card 5 -->
+      <!-- project card 4 -->
       <div class="sw-card2 fwc">
         <div class="fullworkcard">
           <div class="divinfo">
             <span class="mb15">Portfolio & Risk Platform</span>
             <h2>Portfolio Management System</h2>
-            <p class="mt15">Elwood's PMS app provides a comprehensive overview of positions, risk, and P&L across venues. I improved the UX of the positions page by designing features that allow users to customise their view—enabling custom columns, number formatting, and flexible grouping. Additionally, I redesigned the reporting feature to be fully self-service, allowing users to manage all reports independently without requiring support assistance.</p>
-            <a href="https://www.elwood.io/pms-portfolio-management" class="inline-btn mt50">Live View <i class="fa-solid fa-right-long"></i></a>
+            <p class="mt15">Elwood's PMS app provides an overview of positions, risk, and P&L. I improved the UX of the positions page by designing features that allow users to customise their table such as custom columns, custom number formatting and flexible grouping. I also redesigned the reporting feature to be fully self-service, allowing users to manage all reports independently.</p>
+            <a href="https://www.elwood.io/pms-portfolio-management" class="inline-btn mt20">Live View <i class="fa-solid fa-right-long"></i></a>
           </div>
           <div class="divviewwork">
             <img src="images/background/pms.png" alt="Institutional Portfolio & Risk SAAS">
@@ -209,7 +209,7 @@
       </div>
       <div class="workslidercontrol">
         <div class="item-number whitetxt">
-          <span id="counter">1/5</span>
+          <span id="counter">1/4</span>
         </div>
         <div class="btnforportfolio whitetxt">
           <p>Full case studies available on request</p>
@@ -415,5 +415,21 @@
       <script src="assets/js/main.js"></script>
       <!--Custom Js File -->
       <script src="js/custom.js"></script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const scrollLink = document.querySelector('a[href="#projects"]');
+          if (scrollLink) {
+            scrollLink.addEventListener('click', function(event) {
+              event.preventDefault();
+              const target = document.getElementById('projects');
+              if (target) {
+                target.scrollIntoView({
+                  behavior: 'smooth'
+                });
+              }
+            });
+          }
+        });
+      </script>
    </body>
 </html>
