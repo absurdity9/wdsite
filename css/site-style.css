@@ -27,13 +27,14 @@
 
 .button-group {
   display: flex;
-  gap: 1rem; /* Adds space between buttons horizontally */
+  flex-direction: row; /* Default to horizontal */
+  gap: 1rem;           /* Horizontal gap by default */
 }
 
-/* For small screens, stack vertically and keep the gap */
+/* For small screens, stack vertically and adjust gap direction */
 @media (max-width: 600px) {
   .button-group {
     flex-direction: column;
-    gap: 1rem; /* Ensures gap applies vertically */
+    gap: 1rem;         /* Now the gap is vertical between stacked buttons */
   }
 }
