@@ -24,3 +24,16 @@
 .hero-buttons .sw-btn i {
   font-size: 14px;
 }
+
+.button-group {
+  display: flex;
+  gap: 1rem; /* Adds space between buttons horizontally */
+}
+
+/* For small screens, stack vertically and keep the gap */
+@media (max-width: 600px) {
+  .button-group {
+    flex-direction: column;
+    gap: 1rem; /* Ensures gap applies vertically */
+  }
+}
