@@ -12,3 +12,15 @@
   .inline-btn:hover {
     color: #ff5722;
   }
+
+/* Custom smaller button styles for hero section */
+.hero-buttons .sw-btn {
+  font-size: 16px;
+  padding: 0px 24px;
+  line-height: 48px;
+  border-radius: 6px;
+}
+
+.hero-buttons .sw-btn i {
+  font-size: 14px;
+}

@@ -114,8 +114,11 @@
                      <div class="social-link-sw mt40 wow fadeInUp" data-wow-delay=".4s" style="color: #D15642;">
                         <span class="linktitle wow fadeInUp" data-wow-delay=".75s">
                           <p>Currently at Elwood.io - designing institutional trading platforms</p>
-                          <p><a href="#projects"><i class="fa-solid fa-arrow-down-long"></i></a></p>
                         </span>
+                        <div class="hero-buttons mt-4">
+                          <a href="#" id="audioOverviewBtn" class="sw-btn sw-orange-btn me-3"><i class="fa-solid fa-play me-2"></i>Listen to the audio overview</a>
+                          <a href="#projects" class="sw-btn sw-blue-btn"><i class="fa-solid fa-arrow-down-long me-2"></i>Read more</a>
+                        </div>
                      </div>
                   </div>
                </div>
@@ -412,6 +415,7 @@
       <script src="js/custom.js"></script>
       <script>
         document.addEventListener('DOMContentLoaded', function() {
+          // Existing scroll functionality
           const scrollLink = document.querySelector('a[href="#projects"]');
           if (scrollLink) {
             scrollLink.addEventListener('click', function(event) {
@@ -421,6 +425,50 @@
                 target.scrollIntoView({
                   behavior: 'smooth'
                 });
+              }
+            });
+          }
+
+          // Audio overview functionality
+          const audioBtn = document.getElementById('audioOverviewBtn');
+          let audioElement = null;
+          let isPlaying = false;
+
+          if (audioBtn) {
+            audioBtn.addEventListener('click', function(event) {
+              event.preventDefault();
+              
+              if (!audioElement) {
+                // Create audio element on first click
+                audioElement = new Audio('assets/audio/William_Deng_Fintech_Product UX_UI_Designer Profile.wav');
+                audioElement.preload = 'auto';
+                
+                // Update button when audio ends
+                audioElement.addEventListener('ended', function() {
+                  isPlaying = false;
+                  audioBtn.innerHTML = '<i class="fa-solid fa-play me-2"></i>Listen to an audio overview';
+                });
+                
+                // Handle loading errors
+                audioElement.addEventListener('error', function() {
+                  console.error('Error loading audio file');
+                  audioBtn.innerHTML = '<i class="fa-solid fa-exclamation-triangle me-2"></i>Audio unavailable';
+                });
+              }
+              
+              if (!isPlaying) {
+                // Play audio
+                audioElement.play().then(() => {
+                  isPlaying = true;
+                  audioBtn.innerHTML = '<i class="fa-solid fa-pause me-2"></i>Pause';
+                }).catch((error) => {
+                  console.error('Error playing audio:', error);
+                });
+              } else {
+                // Pause audio
+                audioElement.pause();
+                isPlaying = false;
+                audioBtn.innerHTML = '<i class="fa-solid fa-play me-2"></i>Listen to an audio overview';
               }
             });
           }
